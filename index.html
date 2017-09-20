@@ -1,18 +1,455 @@
 Hello world check out my homepage!
-<nav>
-		<div id = "nav">
-			<ul id="navlist"  >
-			<li><a id="home" class="selected" href="#">Home</a></li>
-				<li><a id="course" class="selected" href="#">Courses</a></li>
-				<li><a id="skill" class="selected" href="#">Skills</a></li>
-				<li><a id="illus" class="selected" href="#">Illustrator</a></li>
-				<li><a id="classwork" class="selected" href="#">Class Work</a></li>
-				<li><a href="images/Resume.pdf">Resume</a></li>
-				<li><a id="about" class="selected" href="#">About Me</a></li>
-				<li><a id="note" class="selected" href="#">Notes</a></li>
-				<li><a id="contact" class="selected" href="#">Contact</a></li>
-			</ul>
-		</nav>
+<!DOCTYPE html>
+<html lang="en">
+	
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, minimumscale=1.0, maximum-scale=1.0" />
+		<title>Ulijah Charles's Portfolio</title>
+		<link href="css/PortCSS.css" type="text/css" rel="stylesheet" />
+		<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
+		<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js"></script>
+		<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="jquery.slides.min.js"></script>
+	
+	<script type="text/javascript">
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});
+</script> 
+	<script>
+	"use strict";
+	$(document).ready(function(){
+		$("#home").on("click", function(e){
+			$("#homeCont").fadeIn();
+			$("#courses").hide();
+			$("#skills").hide();
+			$("#cw").hide();
+			$("#illu").hide();
+			$("#abouts").hide();
+			$("#notes").hide();
+			$("#contacts").hide();
+
+			
+			$("#home").addClass("selected");
+			$("#course").removeClass("selected");
+			$("#skill").removeClass("selected");
+			$("#classwork").removeClass("selected");
+			$("#illus").removeClass("selected");
+			$("#about").removeClass("selected");
+			$("#note").removeClass("selected");
+			$("#contact").removeClass("selected");
+
+		});
+		
+		
+		$("#course").on("click", function(e){
+			
+			$("#homeCont").hide();
+			$("#courses").fadeIn();
+			$("#skills").hide();
+			$("#cw").hide();
+			$("#illu").hide();
+			$("#abouts").hide();
+			$("#notes").hide();			
+			$("#contacts").hide();
+			
+			$("#home").removeClass("selected");
+			$("#course").addClass("selected");
+			$("#skill").removeClass("selected");
+			$("#classwork").removeClass("selected");
+			$("#illus").removeClass("selected");
+			$("#about").removeClass("selected");
+			$("#note").removeClass("selected");
+			$("#contact").removeClass("selected");
+
+	
+		});
+		
+		$("#skill").on("click", function(e){
+			
+			$("#homeCont").hide();
+			$("#courses").hide();
+			$("#skills").fadeIn();
+			$("#cw").hide();
+			$("#illu").hide();
+			$("#abouts").hide();
+			$("#notes").hide();			
+			$("#contacts").hide();		
+			
+			
+			$("#home").removeClass("selected");
+			$("#course").removeClass("selected");
+			$("#skill").addClass("selected");
+			$("#classwork").removeClass("selected");
+			$("#illus").removeClass("selected");
+			$("#about").removeClass("selected");
+			$("#note").removeClass("selected");
+			$("#contact").removeClass("selected");
+
+
+		});
+		
+		$("#classwork").on("click", function(e){
+			
+			$("#homeCont").hide();
+			$("#courses").hide();
+			$("#skills").hide();
+			$("#cw").fadeIn();
+			$("#illu").hide();
+			$("#abouts").hide();
+			$("#notes").hide();
+			$("#contacts").hide();
+			
+			
+			$("#home").removeClass("selected");
+			$("#course").removeClass("selected");
+			$("#skill").removeClass("selected");
+			$("#classwork").addClass("selected");
+			$("#illus").removeClass("selected");
+			$("#about").removeClass("selected");
+			$("#note").removeClass("selected");
+			$("#contact").removeClass("selected");
+
+		});
+		
+		$("#illus").on("click", function(e){
+
+			$("#homeCont").hide();
+			$("#courses").hide();
+			$("#skills").hide();
+			$("#cw").hide();
+			$("#illu").fadeIn();
+			$("#abouts").hide();
+			$("#notes").hide();
+			$("#contacts").hide();
+			
+			$("#home").removeClass("selected");
+			$("#course").removeClass("selected");
+			$("#skill").removeClass("selected");
+			$("#classwork").removeClass("selected");
+			$("#illus").addClass("selected");
+			$("#about").removeClass("selected");
+			$("#note").removeClass("selected");
+			$("#contact").removeClass("selected");
+
+		});
+		
+		$("#about").on("click", function(e){
+
+			$("#homeCont").hide();
+			$("#courses").hide();
+			$("#skills").hide();
+			$("#cw").hide();
+			$("#illu").hide();
+			$("#abouts").fadeIn();
+			$("#notes").hide();
+			$("#contacts").hide();
+			
+			$("#home").removeClass("selected");
+			$("#course").removeClass("selected");
+			$("#skill").removeClass("selected");
+			$("#classwork").removeClass("selected");
+			$("#illus").removeClass("selected");
+			$("#about").addClass("selected");
+			$("#note").removeClass("selected");
+			$("#contact").removeClass("selected");
+
+		});
+		
+		$("#note").on("click", function(e){
+
+			$("#homeCont").hide();
+			$("#courses").hide();
+			$("#skills").hide();
+			$("#cw").hide();
+			$("#illu").hide();
+			$("#abouts").hide();
+			$("#notes").fadeIn();
+			$("#contacts").hide();
+			
+			$("#home").removeClass("selected");
+			$("#course").removeClass("selected");
+			$("#skill").removeClass("selected");
+			$("#classwork").removeClass("selected");
+			$("#illus").removeClass("selected");
+			$("#about").removeClass("selected");
+			$("#note").addClass("selected");
+			$("#contact").removeClass("selected");
+		});
+		
+		$("#contact").on("click", function(e){
+
+			$("#homeCont").hide();
+			$("#courses").hide();
+			$("#skills").hide();
+			$("#cw").hide();
+			$("#illu").hide();
+			$("#abouts").hide();
+			$("#notes").hide();
+			$("#contacts").fadeIn();
+			
+			$("#home").removeClass("selected");
+			$("#course").removeClass("selected");
+			$("#skill").removeClass("selected");
+			$("#classwork").removeClass("selected");
+			$("#illus").removeClass("selected");
+			$("#about").removeClass("selected");
+			$("#note").removeClass("selected");
+			$("#contact").addClass("selected");
+		});
+	
+	}});
+	
+	</script>
+
+
+  
+	
+		
+		
+	
+	
+	</head>
+	
+	<body>
+	
+			
+
+<!DOCTYPE html>
+<html lang="en">
+	
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, minimumscale=1.0, maximum-scale=1.0" />
+		<title>Ulijah Charles's Portfolio</title>
+		<link href="css/PortCSS.css" type="text/css" rel="stylesheet" />
+
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="../jquery.slides.min.js"></script>
+	<script>
+	"use strict";
+	$(document).ready(function(){
+		$("#home").on("click", function(e){
+			$("#homeCont").fadeIn();
+			$("#courses").hide();
+			$("#skills").hide();
+			$("#cw").hide();
+			$("#illu").hide();
+			$("#abouts").hide();
+			$("#notes").hide();
+			$("#contacts").hide();
+
+			
+			$("#home").addClass("selected");
+			$("#course").removeClass("selected");
+			$("#skill").removeClass("selected");
+			$("#classwork").removeClass("selected");
+			$("#illus").removeClass("selected");
+			$("#about").removeClass("selected");
+			$("#note").removeClass("selected");
+			$("#contact").removeClass("selected");
+
+		});
+		
+		
+		$("#course").on("click", function(e){
+			
+			$("#homeCont").hide();
+			$("#courses").fadeIn();
+			$("#skills").hide();
+			$("#cw").hide();
+			$("#illu").hide();
+			$("#abouts").hide();
+			$("#notes").hide();			
+			$("#contacts").hide();
+			
+			$("#home").removeClass("selected");
+			$("#course").addClass("selected");
+			$("#skill").removeClass("selected");
+			$("#classwork").removeClass("selected");
+			$("#illus").removeClass("selected");
+			$("#about").removeClass("selected");
+			$("#note").removeClass("selected");
+			$("#contact").removeClass("selected");
+
+	
+		});
+		
+		$("#skill").on("click", function(e){
+			
+			$("#homeCont").hide();
+			$("#courses").hide();
+			$("#skills").fadeIn();
+			$("#cw").hide();
+			$("#illu").hide();
+			$("#abouts").hide();
+			$("#notes").hide();			
+			$("#contacts").hide();		
+			
+			
+			$("#home").removeClass("selected");
+			$("#course").removeClass("selected");
+			$("#skill").addClass("selected");
+			$("#classwork").removeClass("selected");
+			$("#illus").removeClass("selected");
+			$("#about").removeClass("selected");
+			$("#note").removeClass("selected");
+			$("#contact").removeClass("selected");
+
+
+		});
+		
+		$("#classwork").on("click", function(e){
+			
+			$("#homeCont").hide();
+			$("#courses").hide();
+			$("#skills").hide();
+			$("#cw").fadeIn();
+			$("#illu").hide();
+			$("#abouts").hide();
+			$("#notes").hide();
+			$("#contacts").hide();
+			
+			
+			$("#home").removeClass("selected");
+			$("#course").removeClass("selected");
+			$("#skill").removeClass("selected");
+			$("#classwork").addClass("selected");
+			$("#illus").removeClass("selected");
+			$("#about").removeClass("selected");
+			$("#note").removeClass("selected");
+			$("#contact").removeClass("selected");
+
+		});
+		
+		$("#illus").on("click", function(e){
+
+			$("#homeCont").hide();
+			$("#courses").hide();
+			$("#skills").hide();
+			$("#cw").hide();
+			$("#illu").fadeIn();
+			$("#abouts").hide();
+			$("#notes").hide();
+			$("#contacts").hide();
+			
+			$("#home").removeClass("selected");
+			$("#course").removeClass("selected");
+			$("#skill").removeClass("selected");
+			$("#classwork").removeClass("selected");
+			$("#illus").addClass("selected");
+			$("#about").removeClass("selected");
+			$("#note").removeClass("selected");
+			$("#contact").removeClass("selected");
+
+		});
+		
+		$("#about").on("click", function(e){
+
+			$("#homeCont").hide();
+			$("#courses").hide();
+			$("#skills").hide();
+			$("#cw").hide();
+			$("#illu").hide();
+			$("#abouts").fadeIn();
+			$("#notes").hide();
+			$("#contacts").hide();
+			
+			$("#home").removeClass("selected");
+			$("#course").removeClass("selected");
+			$("#skill").removeClass("selected");
+			$("#classwork").removeClass("selected");
+			$("#illus").removeClass("selected");
+			$("#about").addClass("selected");
+			$("#note").removeClass("selected");
+			$("#contact").removeClass("selected");
+
+		});
+		
+		$("#note").on("click", function(e){
+
+			$("#homeCont").hide();
+			$("#courses").hide();
+			$("#skills").hide();
+			$("#cw").hide();
+			$("#illu").hide();
+			$("#abouts").hide();
+			$("#notes").fadeIn();
+			$("#contacts").hide();
+			
+			$("#home").removeClass("selected");
+			$("#course").removeClass("selected");
+			$("#skill").removeClass("selected");
+			$("#classwork").removeClass("selected");
+			$("#illus").removeClass("selected");
+			$("#about").removeClass("selected");
+			$("#note").addClass("selected");
+			$("#contact").removeClass("selected");
+		});
+		
+		$("#contact").on("click", function(e){
+
+			$("#homeCont").hide();
+			$("#courses").hide();
+			$("#skills").hide();
+			$("#cw").hide();
+			$("#illu").hide();
+			$("#abouts").hide();
+			$("#notes").hide();
+			$("#contacts").fadeIn();
+			
+			$("#home").removeClass("selected");
+			$("#course").removeClass("selected");
+			$("#skill").removeClass("selected");
+			$("#classwork").removeClass("selected");
+			$("#illus").removeClass("selected");
+			$("#about").removeClass("selected");
+			$("#note").removeClass("selected");
+			$("#contact").addClass("selected");
+		});
+		
+		
+		$('#slides').slidesjs(
+			{
+				width: 800,
+				height: 500,
+				pagination:
+				{
+					active: false
+				
+				},
+				effect:
+				{
+					slide:
+					{
+						speed: 1000
+					
+					}			
+				}
+			}
+			);			
+	});
+	</script>
+
+	</head>
+	
+	<header>
+			<a href="index.shtml">
+				<img id="logo" src="images/logo.png" alt="Portfolio logo" />
+			</a>
+		</header>
 
 
 
